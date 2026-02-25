@@ -67,7 +67,10 @@ Uninstall:
 ### Notification behavior
 - Collector process start: Discord info.
 - Graceful stop/restart (`SIGTERM`/`SIGINT`): Discord warn.
-- Crash/down detected by monitor: Discord error.
-- Recover after down: Discord info with downtime duration.
+- Health uncertain (heartbeat issue but PID alive): Discord warn.
+- Crash/down detected by monitor (confirmed stop): Discord error.
+- Recover after confirmed down: Discord info with downtime duration.
+- Recover after uncertain state: Discord info (`collector heartbeat recovered`).
 - Long down: repeated error report every `WS_COLLECTOR_MONITOR_DOWN_REPORT_MS`.
+- Long uncertain: repeated warn report every `WS_COLLECTOR_MONITOR_SUSPECT_REPORT_MS`.
 # ws_collector
