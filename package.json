@@ -1,0 +1,14 @@
+{
+  "name": "ws-collector",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "description": "Standalone Hyperliquid WS collector for shared raw feed",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js"
+  },
+  "dependencies": {
+    "ws": "^8.18.0"
+  }
+}
