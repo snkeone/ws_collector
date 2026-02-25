@@ -1,0 +1,32 @@
+# Dependencies
+node_modules/
+
+# Environment files
+.env
+.env.*
+!.env.example
+
+# Logs and runtime data
+logs/*.log
+logs/*.jsonl
+logs/raw-*.jsonl
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+
+# Large generated data files
+*.ndjson
+*.sqlite
+*.sqlite3
+
+# Process / pid files
+*.pid
+*.pid.lock
+
+# OS / editor artifacts
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
